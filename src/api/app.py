@@ -11,6 +11,7 @@ import numpy as np
 import joblib
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from contextlib import asynccontextmanager
 
 from .models import (
@@ -223,6 +224,12 @@ async def batch_analyze(request: BatchEmailRequest):
         legitimate_count=len(results) - phishing_count,
         evasion_rate=round(1 - phishing_count / max(len(results), 1), 4),
     )
+
+
+# Serve static frontend if it exists
+frontend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "web", "dist"))
+if os.path.isdir(frontend_dir):
+    app.mount("/", StaticFiles(directory=frontend_dir, html=True), name="frontend")
 
 
 if __name__ == "__main__":

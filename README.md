@@ -1,8 +1,5 @@
 # PhishShield-XAI: Adversarial Phishing Detection
 
-### Authors:
-- **Muhammad Hashir**
-- **Amber Khurshid**
 
 ![PhishShield Banner](phishshield_banner_1778007048455.png)
 

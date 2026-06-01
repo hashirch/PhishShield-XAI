@@ -1,6 +1,7 @@
 import './style.css'
 
-const apiBase = 'http://localhost:8000';
+// Use relative path in production, absolute path in local dev
+const apiBase = window.location.origin.includes('localhost:5173') ? 'http://localhost:8000' : '';
 
 // Elements
 const emailInput = document.getElementById('email-input');
