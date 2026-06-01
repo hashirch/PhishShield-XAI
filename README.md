@@ -1,3 +1,12 @@
+---
+title: PhishShield
+emoji: 👁
+colorFrom: yellow
+colorTo: red
+sdk: docker
+pinned: false
+license: mit
+---
 # PhishShield-XAI: Adversarial Phishing Detection
 
 
