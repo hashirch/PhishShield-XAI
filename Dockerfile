@@ -23,7 +23,6 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # Copy backend source code
 COPY src/ ./src/
 COPY data/ ./data/
-COPY models/ ./models/
 COPY scripts/ ./scripts/
 
 # Ensure initial model artifacts exist
