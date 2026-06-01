@@ -33,7 +33,7 @@ RUN python scripts/generate_artifacts.py
 COPY --from=frontend-builder /app/web/dist ./web/dist
 
 # Expose the API port
-EXPOSE 8000
+EXPOSE 7860
 
 # Run the FastAPI application
-CMD ["python", "-m", "uvicorn", "src.api.app:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python", "-m", "uvicorn", "src.api.app:app", "--host", "0.0.0.0", "--port", "7860"]
