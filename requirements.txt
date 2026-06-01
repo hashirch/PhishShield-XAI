@@ -8,10 +8,10 @@ numpy>=1.24.0
 pandas>=2.0.0
 
 # Deep Learning & Transformers
-torch>=2.0.0
-transformers>=4.35.0
-datasets>=2.14.0
-accelerate>=0.24.0
+# torch>=2.0.0
+# transformers>=4.35.0
+# datasets>=2.14.0
+# accelerate>=0.24.0
 
 # Explainability (XAI)
 shap>=0.43.0
